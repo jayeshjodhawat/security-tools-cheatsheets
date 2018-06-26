@@ -1,0 +1,23 @@
+
+# Getting help
+readelf --help
+man readelf
+
+
+# Command syntax
+readelf <option(s)> <elf_name>
+
+
+-h 			Displays File header
+-s			Displays the symbols table
+-S 			Displays the section header (similar to objdump with -h option)
+-d 			Displays the dynamic sections
+
+
+-x <section_index|section_name>		Displays  hex-dump of the section mentioned
+-p <sectino_index|section_name>		Displays contents of section (specified as idex/name) as strings.
+
+
+
+# Useful resources
+https://sourceware.org/binutils/docs/binutils/readelf.html
