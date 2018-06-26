@@ -1,0 +1,28 @@
+# Getting Help
+wfuzz --h
+wfuzz --help	# Advanced help
+man wfuzz
+
+# Brute-force Directory/file using wordlist
+wfuzz -z file,<wordlist_path> --hc 404 <Target_URL>/FUZZ
+
+# Brute-force files (with extention) using wordlist
+wfuzz -z file,<wordlist_path> --hc 404 <Target_URL>/FUZZ.<ext>
+
+# Brute-force URL GET parameter using range
+wfuzz -z range,1-100 --hc 404 <Target_URL>/?id=FUZZ
+
+# Login form Brute-force (http post form) #1
+wfuzz -z username=<username> -z file,<wordlist_path> -d '<username_field_name>=FUZZ&<password_field_name>=FUZ2Z' --hs <hide_response_containing_word> <form_submit_URL>
+
+# Login form Brute-force (http post form) #2
+wfuzz -z file,<username_wordlist> -z file,<password_wordlist> -b '<username_field_name>=FUZZ&<password_field_name>=FUZ2Z' <form_submit_URL>
+
+# Options which can be combined with above commands
+	# -c 						-> for colorful output
+	# --hc	<response_code>		-> hide response with secified response code
+	
+# Useful Links:
+https://tools.kali.org/web-applications/wfuzz
+https://github.com/xmendez/wfuzz
+http://www.edge-security.com/wfuzz.php

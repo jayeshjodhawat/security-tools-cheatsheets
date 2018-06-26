@@ -1,0 +1,34 @@
+# Getting Help
+wpscan --help
+
+# Update it's database
+wpscan --update
+
+# Basic verbose scan
+wpscan --url <Target_URL> --verbose
+
+# Enumerate vulnerable plugin, vulnerable themes, users (1-10), timthumbs
+wpscan --url <Target_URL> --enumerate vp,vt,u,tt
+
+# Enumerate all plugin, all themes, users (1-10), timthumbs
+wpscan --url <Target_URL> --enumerate ap,at
+
+# Enumerate users (10-20)
+# usernames from id 10 to 20 (you must write [] chars) 
+wpscan --url <Target_URL> --enumerate u[10-20]
+
+# Login bruteforce
+wpscan --url <Target_URL> --usernames <username_wordlist> --wordlist <password_wordlist>
+	# --username for single username
+	
+# Custom user agent
+wpscan --url <Target_URL> --user-agent <User-Agent>
+	# --random-agent for random User-Agent.
+	
+# Creates a log.txt file with WPScan's output if no filename is supplied.
+wpscan --url <Target_URL> --log [filename]
+
+# Useful Links:
+https://tools.kali.org/web-applications/wpscan
+https://github.com/wpscanteam/wpscan
+https://wpscan.org/

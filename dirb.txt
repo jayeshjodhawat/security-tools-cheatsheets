@@ -1,0 +1,25 @@
+#Getting Help
+dirb
+
+# Bruteforce using wordlist(s) # Comma seprated wordlist path for multipl wordlist at a time
+dirb <URL/IP> <wordlist_path(s)>
+
+# Bruteforce for files with extention
+dirb <URL/IP> <wordlist_path(s)> -X <extentions>
+
+# HTTP Authentication
+dirb <URL/IP> <wordlist_path(s)> -u <username:password>
+
+# Specify Custom USER_AGENT and Set a cookie for the HTTP request
+dirb <URL/IP> <wordlist_path(s)> -a <agent_string> -c <cookie_string>
+
+# Other useful options
+	# -i : Use case-insensitive search.
+	# -o <output_file> : Save output to disk.
+	# -p <proxy[:port]> : Use this proxy. (Default port is 1080)
+	# -P <proxy_username:proxy_password> : Proxy Authentication.
+	# -r : Don't search recursively.
+	
+# Useful Links:
+https://tools.kali.org/web-applications/dirb
+http://dirb.sourceforge.net/
