@@ -1,0 +1,36 @@
+
+
+# Getting help
+strings --help
+man strings
+
+
+# Usage/ Command syntax
+strings <optinon(s)> <file(s)>
+
+
+# Most frequently used options
+
+-a			Scans the entire file rather than just the .data section (default)
+-d			Scans the .data section of the file
+-f			Print filename before each string (useful in case of examining multiple files)
+-w			Include whitespaces as valid string charecters
+
+-t <o,d,x>	To print location of string or string offset in octal, decimal or hexadecimal format
+
+
+# Select encoding
+-e, --encoding={s,S,b,l,B,L}    Select charecter size and endianness:
+                                        s = 7-bit
+                                        S = 8-bit
+                                        b = 16-bit big endian
+                                        l = 16-bit little endian
+                                        B = 32-bit big endian
+                                        L = 32-bit little endian
+                                        {b,l} = 16-bit
+                                        {B,L} = 32-bit
+		
+
+# For example
+strings -e L <binary_name(s)>
+strings -t x -e L <binary_name(s)>
