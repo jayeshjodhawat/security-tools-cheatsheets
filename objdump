@@ -28,7 +28,8 @@ objdump -M intel -D <binary_name(s)>
 	i386		Disassembly in 32-bit mode
 
 
-Examples:	objdump -d <binary_name(s)>	
-			objdump -M intel,i386 -D <binary_name(s)>
+# Examples	
+objdump -d <binary_name(s)>	
+objdump -M intel,i386 -D <binary_name(s)>
 	
 
