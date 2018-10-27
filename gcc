@@ -1,0 +1,30 @@
+			
+## MOST USED OPTIONS
+
+# To compile a simple 'C source code' to binary
+gcc source_code.c -o binary_name
+
+
+# Some useful options
+			
+        -o                      : place the output into <file>
+        -m32                    : Cross compilating a 32-bit binary
+        -masm=intel             : o/p assembly in 'intel' dialect. Useful when writing inline
+                                  assembly code where gcc is by default set to AT&T syntax.
+
+# Security options
+
+        -pie                    : Create a Position Independent Executable (by default this
+                                  option is set) (produces ELF LSB shared object)
+        -no-pie                 : Don't produce a position independent executable (produces an
+                                  ELF LSB executable)
+
+        --fno-stack-protector   : Don't put up canary checks in the binary.
+
+
+        -nostdlib               : Same as passing '-nostartfiles' and '-nodefaultlibs'. This            	                           disables those 5 "start files" crt*.o (crt0.o, crti.o, crtn.o,
+                                  crtbegin.o, crtend.o) that are automatically added to the link
+                                  command line.
+        -print-file-name=crti.o : Prints the location of the file named 'crti.o'
+
+
