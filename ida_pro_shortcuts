@@ -1,0 +1,25 @@
+
+# These are some useful stuff pertaining to IDA-PRO
+
+
+# SHORTCUTS
+=>
+    SPACE-BAR   : Change between graphical mode and text mode
+    G           : To jump to an address
+    Alt + T     : To find a textual sequence
+    Alt + b     : To search for sequence of bytes (opcodes)
+    x           : When pressed this at a symbol to look at the cross references made or the number
+                  of times its reference is used.
+    a           : Change/Convert to arrays
+    : or ;      : Used to specify comments on a line
+    n           : Rename variables
+    Right-click : Convert const formats
+
+
+#	GO TO AND CONVERTERS
+=>		
+    view->Open Subviews->Strings        : To open strings window
+    options->Genral->auto comment       : Turn on autocomments
+    options->Genral->opcode bytes 8     : set width for opcode bytes
+
+
